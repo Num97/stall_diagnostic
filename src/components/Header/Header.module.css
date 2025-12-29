@@ -1,0 +1,74 @@
+.header {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem;
+  background-color: #f3f4f6; /* светло-серый фон */
+  border-bottom: 1px solid #e5e7eb;
+  position: relative;
+  z-index: 1000;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.875rem;
+}
+
+.label {
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+}
+
+.select,
+.datepicker {
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s, background-color 0.2s;
+  cursor: pointer; /* курсор pointer */
+}
+
+.select:hover,
+.datepicker:hover {
+  border-color: #3b82f6;
+  background-color: #f0f9ff; /* лёгкий голубой фон при hover */
+}
+
+.select:focus,
+.datepicker:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+.hubButton {
+  /* margin-right: auto; */
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  background-color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.hubButton:hover {
+  background-color: #dff8d3;
+  border-color: #b7d4b0;
+}
+
+.selectBlock {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); 
+  display: flex;
+  gap: 1rem;
+}
+
+.datepicker{
+  width: 80px; 
+  caret-color: transparent;
+}
+

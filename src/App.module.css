@@ -1,0 +1,48 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 20px 32px;
+  background-color: #f8fafc;
+  min-height: calc(100vh - 70px);
+}
+
+/* Левая панель — карточки */
+.leftPanel {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* Правая панель — карусель */
+.rightPanel {
+  flex: 1.2;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: sticky;
+  top: 50px;
+}
+
+/* Адаптив */
+@media (max-width: 900px) {
+  .wrapper {
+    flex-direction: column;
+    padding: 16px;
+  }
+
+  .leftPanel,
+  .rightPanel {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.noData {
+  text-align: center;
+  color: #888;
+  margin-top: 40px;
+  font-size: 50px;
+  font-weight: 700;
+}

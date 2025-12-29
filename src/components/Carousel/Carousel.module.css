@@ -1,0 +1,55 @@
+.carousel {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(
+    circle at center,
+    #fffde7 0%,    /* очень светлый молочный */
+    #fff9c4 70%,   /* кремовый */
+    #ffe082 100%    /* насыщенный молочный желтоватый */
+  );
+  border: 4px solid #ffd54f; /* мягкий золотисто-молочный */
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.1),
+              0 10px 25px rgba(0, 0, 0, 0.2);
+  animation: rotate 240s linear infinite;
+  transform-origin: center center;
+  overflow: visible;
+  transition: transform 0.3s ease-in-out;
+}
+
+.carousel:hover {
+  animation-play-state: paused;
+}
+
+.carousel::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #757575, #424242);
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.3),
+              0 4px 10px rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+
+.carousel::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  width: 80%;
+  height: 20px;
+  border-radius: 50%;
+  filter: blur(6px);
+  z-index: 0;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+

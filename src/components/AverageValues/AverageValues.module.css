@@ -1,0 +1,54 @@
+.container {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin: 16px 0;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: linear-gradient(145deg, #ffffff, #f5f7fa);
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 16px 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  min-width: 190px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.label {
+  display: block;
+  font-size: 1rem;
+  color: #6b7280;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 6px;
+}
+
+.subLabel {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.value {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2563eb;
+}
+
+.total {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #6b7280;
+}

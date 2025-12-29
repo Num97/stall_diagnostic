@@ -1,0 +1,22 @@
+.stall {
+  width: 110px;                  /* ширина прямоугольника */
+  height: 23px;                 /* высота прямоугольника */
+  border-radius: 6px;           /* небольшое скругление углов */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  font-weight: 600;
+  font-size: 14px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.2); /* лёгкий контур */
+  background: #90caf9; /* дефолтный цвет (переопределится через style) */
+}
+
+.stall:hover {
+  transform: scale(1.25);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.35);
+  border-color: rgba(0, 0, 0, 0.3);
+}

@@ -1,0 +1,159 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* центрирует StallCardsHeader */
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 12px;
+  justify-content: center; /* карточки по центру */
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px;
+}
+
+
+.noData {
+  color: #9ca3af;
+  font-style: italic;
+  font-size: 0.95rem;
+  margin-top: 12px;
+}
+
+/* Карточка */
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(145deg, #ffffff, #f5f7fa);
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 16px 20px;
+  width: 190px;
+  height: 150px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.good {
+  background: linear-gradient(145deg, #ecfff2, #d9f7e1);
+  box-shadow:
+    0 4px 10px rgba(16, 185, 129, 0.1),
+    inset 0 1px 2px rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(16, 185, 129, 0.15);
+  transition: all 0.3s ease;
+}
+
+.good:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 8px 20px rgba(16, 185, 129, 0.18),
+    inset 0 1px 2px rgba(255, 255, 255, 0.6);
+}
+
+.bad {
+  background: linear-gradient(145deg, #fff0f0, #ffe2e2);
+  box-shadow:
+    0 4px 10px rgba(239, 68, 68, 0.12),
+    inset 0 1px 2px rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(239, 68, 68, 0.18);
+  transition: all 0.3s ease;
+}
+
+.bad:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 8px 20px rgba(239, 68, 68, 0.2),
+    inset 0 1px 2px rgba(255, 255, 255, 0.6);
+}
+
+.empty {
+  background: linear-gradient(145deg, #f6f7f8, #eceff1);
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.05),
+    inset 0 1px 2px rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(156, 163, 175, 0.15);
+  transition: all 0.3s ease;
+}
+
+.empty:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.08),
+    inset 0 1px 2px rgba(255, 255, 255, 0.6);
+}
+
+/* Верхняя часть */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  color: #1e293b;
+  font-size: 1.1rem;
+}
+
+.meterNumber {
+  background: linear-gradient(90deg, #2563eb, #3b82f6); /* градиент */
+  -webkit-background-clip: text;  /* для Chrome, Safari, Edge */
+  background-clip: text;          /* стандартное свойство */
+  -webkit-text-fill-color: transparent; /* прозрачный текст для WebKit */
+  color: transparent;              /* прозрачный текст для других браузеров */
+  font-weight: 600;
+  font-size: 1.1rem;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+/* Контент */
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.metric {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.label {
+  color: #6b7280;
+  font-size: 0.85rem;
+}
+
+.value {
+  font-weight: 600;
+  color: #111827;
+  font-size: 0.95rem;
+}
+
+/* Хорошо — зелёный */
+.goodValue {
+  color: #16a34a;
+  font-weight: 600;
+}
+
+/* Проблемный — красный */
+.badValue {
+  color: #dc2626;
+  font-weight: 600;
+}
+
+/* Пустой — серый */
+.emptyValue {
+  color: #4b5563;
+  font-weight: 600;
+}
