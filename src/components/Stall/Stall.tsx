@@ -65,11 +65,11 @@ const Stall: React.FC<StallProps> = ({
     !isZero && (
       (data.total_milk_production ?? 0) <= 0.5 * (averages.avgMilkProduction ?? 0) ||
       (data.number_reattaches ?? 0) >= 1.5 * (averages.avgReattaches ?? 0) &&
-        (data.number_reattaches ?? 0) > 4 ||
+        (data.number_reattaches ?? 0) > 9 ||
       (data.manual_detach_count ?? 0) >= 1.5 * (averages.avgManualDetaches ?? 0) &&
-        (data.manual_detach_count ?? 0) > 4 ||
+        (data.manual_detach_count ?? 0) > 9 ||
       (data.manual_mode_count ?? 0) >= 1.5 * (averages.avgManualModes ?? 0) &&
-        (data.manual_mode_count ?? 0) > 4
+        (data.manual_mode_count ?? 0) > 9
     );
 
   // цвет сегмента

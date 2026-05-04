@@ -47,19 +47,19 @@ export function getMetersToShow(
         hasReattaches &&
         !reattachesIsZero &&
         reattaches >= 1.5 * (averages.avgReattaches ?? 0) &&
-        reattaches > 4;
+        reattaches > 9;
 
       const manualDetachesBelow =
         hasManualDetaches &&
         !manualDetachesIsZero &&
         manualDetaches >= 1.5 * (averages.avgManualDetaches ?? 0) &&
-        manualDetaches > 4;
+        manualDetaches > 9;
 
       const manualModesBelow =
         hasManualModes &&
         !manualModesIsZero &&
         manualModes >= 1.5 * (averages.avgManualModes ?? 0) &&
-        manualModes > 4;
+        manualModes > 9;
 
       const isZero = milk === 0;
 
